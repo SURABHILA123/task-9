@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle</title>
+</head>
+<body>
+    <h1>Hover to Toggle Image Visibility</h1>
+    <img id="toggleImage" src="https://fileinfo.com/img/ss/xl/jpg_44-2.jpg" alt="Your Image">
+
+    <script>
+        // Get the image element
+        const image = document.getElementById('toggleImage');
+
+        // Function to toggle image visibility on mouseover and mouseout
+        function toggleVisibility() {
+            if (image.style.visibility === 'hidden') {
+                image.style.visibility = 'visible';
+            } else {
+                image.style.visibility = 'hidden';
+            }
+        }
+
+        // Add event listeners for mouseover and mouseout
+        image.addEventListener('mouseover', toggleVisibility);
+        image.addEventListener('mouseout', toggleVisibility);
+    </script>
+</body>
+</html>
